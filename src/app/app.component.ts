@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'JavaScriptVoorKids';
+
+  url: SafeResourceUrl;
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.url = sanitizer.bypassSecurityTrustResourceUrl('https://stackblitz.com/edit/js-v48mqw?file=index.js');
+  }
 }
