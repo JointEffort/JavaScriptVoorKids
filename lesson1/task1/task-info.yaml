@@ -1,7 +1,0 @@
-type: edu
-custom_name: Welkom
-files:
-- name: task.js
-  visible: true
-- name: test/test.js
-  visible: false

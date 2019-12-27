@@ -1,7 +1,0 @@
-type: edu
-custom_name: Aan de slag
-files:
-- name: task.js
-  visible: true
-- name: test/test.js
-  visible: false
